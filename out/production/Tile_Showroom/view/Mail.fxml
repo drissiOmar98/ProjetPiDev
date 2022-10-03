@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="908.0" prefWidth="1226.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MailController">
+   <children>
+
+
+      <Label layoutX="94.0" layoutY="6.0" text="Send to" />
+      <TextField fx:id="emailToField" layoutX="217.0" layoutY="1.0" prefHeight="27.0" prefWidth="200.0" promptText="Example@example.com" />
+      <Label layoutX="94.0" layoutY="49.0" text="Send from" />
+      <TextField fx:id="emailFromField" layoutX="217.0" layoutY="44.0" prefHeight="27.0" prefWidth="200.0" promptText="Example@gmail.com" />
+      <Label layoutX="94.0" layoutY="84.0" text="Password" />
+      <PasswordField fx:id="emailPasswordField" layoutX="217.0" layoutY="79.0" prefHeight="27.0" prefWidth="200.0" promptText="Abcd@1234" />
+      <Label layoutX="94.0" layoutY="144.0" text="Subject" />
+      <TextField fx:id="emailSubjectField" layoutX="217.0" layoutY="139.0" prefHeight="27.0" prefWidth="200.0" promptText="?" />
+      <Label layoutX="94.0" layoutY="207.0" text="Message" />
+      <TextArea fx:id="emailMessageField" layoutX="217.0" layoutY="186.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+      <Button fx:id="sendEmailButton" layoutX="492.0" layoutY="259.0" mnemonicParsing="false" onAction="#buttonClicked" text="Send!" textFill="#ff009d" />
+      <Label fx:id="sentBoolValue" layoutX="474.0" layoutY="338.0" text="Message Sent!" visible="false" />
+      </children>
+
+</AnchorPane>

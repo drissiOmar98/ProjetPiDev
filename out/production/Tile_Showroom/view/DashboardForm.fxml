@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="908.0" prefWidth="1226.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <Pane fx:id="DashPane" layoutX="10.0" layoutY="104.0" prefHeight="273.0" prefWidth="1205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Pane layoutX="923.0" layoutY="32.0" prefHeight="28.0" prefWidth="241.0" style="-fx-background-color: #ff4757;" />
+
+            <Label fx:id="SoldItem" layoutX="1019.0" layoutY="178.0" prefHeight="40.0" prefWidth="131.0" text="0">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="643.0" layoutY="136.0" prefHeight="28.0" prefWidth="241.0" style="-fx-background-color: #00a8ff;" />
+
+      <Pane layoutX="346.0" layoutY="136.0" prefHeight="28.0" prefWidth="241.0" style="-fx-background-color: #747d8c;" />
+
+      <ImageView fitHeight="72.0" fitWidth="81.0" layoutX="727.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/man.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="1014.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/report menu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="72.0" layoutX="429.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/pin.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txtTotalCustomers" layoutX="754.0" layoutY="280.0" prefHeight="40.0" prefWidth="50.0" text="0">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="TotalOrders" layoutX="452.0" layoutY="280.0" prefHeight="40.0" prefWidth="103.0" text="0">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+
+      <Pane fx:id="DashPane1" layoutX="11.0" layoutY="443.0" prefHeight="419.0" prefWidth="1205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <AreaChart fx:id="areaChart" layoutX="-8.0" layoutY="10.0" prefHeight="400.0" prefWidth="667.0" title="WEEKLY Recruitement PROGRESS">
+              <xAxis>
+                <CategoryAxis label="DAYS" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="SOLD ITEMS" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <PieChart fx:id="PieChart" layoutX="707.0" layoutY="22.0" legendSide="TOP" prefHeight="376.0" prefWidth="474.0" title="Annual  Recruitement " />
+         </children>
+      </Pane>
+      <Pane layoutX="51.0" layoutY="136.0" prefHeight="28.0" prefWidth="241.0" style="-fx-background-color: #ffa502;" />
+
+      <Pane prefHeight="78.0" prefWidth="1226.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+
+      <Label layoutX="76.0" layoutY="289.0" prefHeight="40.0" prefWidth="50.0" text="RS.">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="133.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/stats.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="392.0" prefHeight="40.0" prefWidth="1226.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+      <Label fx:id="TotalSales" layoutX="133.0" layoutY="289.0" prefHeight="40.0" prefWidth="147.0" text="0">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Button fx:id="ADD"  layoutX="1050.0" layoutY="10.0" onAction="#ADDM" prefHeight="57.0" prefWidth="150.0" style="-fx-background-color: #fa8231;" text="Add Manager" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane style="-fx-background-radius: 20;" stylesheets="@../../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aymen.ServiceAy.Aymen">
+    <children>
+       <Pane prefHeight="81.0" prefWidth="1215.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+       <Pane layoutY="849.0" prefHeight="89.0" prefWidth="30.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+
+       <AnchorPane layoutX="-2.0" layoutY="80.0" prefHeight="682.0" prefWidth="1343.0" style="">
+            <children>
+                <AnchorPane layoutX="0.0" layoutY="60.0" prefHeight="598.0" prefWidth="1270.0" style=" -fx-background-radius: 10;" >
+                    <children>
+                  <TabPane layoutX="1.0" layoutY="6.0" opacity="0.65" prefHeight="580.0" prefWidth="1251.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="7.0"  >
+                    <tabs>
+                      <Tab text="Statistiques" >
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-radius: 100%; -fx-border-radius: 100%; -fx-border-image-width: 3px;">
+                                 <children>
+                                    <BarChart fx:id="barcharts" barGap="1.0" cacheShape="false" categoryGap="2.0" centerShape="false" focusTraversable="true" layoutX="-18.0" layoutY="-2.0" maxHeight="250.0" maxWidth="600.0" scaleShape="false">
+                                      <xAxis>
+                                        <CategoryAxis fx:id="device" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis fx:id="visits" side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                    <TableView fx:id="tab2" layoutX="500.0" layoutY="27.0" onMouseClicked="#mousebtn2" prefHeight="203.0" prefWidth="204.0"  stylesheets="@../../css/fullpackstyling.css">
+                                      <columns>
+                                        <TableColumn fx:id="valeurRes" prefWidth="100.79998779296875" text="reservation" />
+                                        <TableColumn fx:id="valeurOff" minWidth="0.0" prefWidth="98.39996337890625" text="offre" />
+                                      </columns>
+                                    </TableView>
+                                    <Line endX="642.833251953125" endY="-10.73333740234375" layoutX="341.0" layoutY="261.0" startX="-312.9000244140625" startY="-10.73333740234375" stroke="#898484" />
+                                    <VBox layoutX="298.0" layoutY="268.0" prefHeight="234.0" prefWidth="249.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: rgba(1,162,211,0.5); -fx-background-radius: 10;" text="Nombres des Client">
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="1.0" blue="0.6499999761581421" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="150.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <children>
+                                                <Label fx:id="nbr_Emp1" prefHeight="117.0" prefWidth="188.0" text="Label" textAlignment="CENTER" textFill="#057822">
+                                                   <font>
+                                                      <Font size="72.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="80.0" right="10.0" top="30.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="586.0" layoutY="266.0" prefHeight="234.0" prefWidth="249.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: rgba(1,162,211,0.5); -fx-background-radius: 10;" text="Nombres des tous Reservation">
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="1.0" blue="0.6499999761581421" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="185.0" prefWidth="197.0">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <children>
+                                                <Label fx:id="nbr_Emp2" prefHeight="117.0" prefWidth="188.0" text="Label" textAlignment="CENTER" textFill="#96066d">
+                                                   <font>
+                                                      <Font size="72.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="80.0" right="10.0" top="30.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="17.0" layoutY="267.0" prefHeight="234.0" prefWidth="249.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: rgba(1,162,211,0.5); -fx-background-radius: 10;" text="Nombres des Employes">
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="1.0" blue="0.6499999761581421" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="150.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <children>
+                                                <Label fx:id="nbr_Emp3" prefHeight="117.0" prefWidth="188.0" text="Label" textAlignment="CENTER" textFill="#790404">
+                                                   <font>
+                                                      <Font size="72.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="80.0" right="10.0" top="30.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Factures des Materiales">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="14.0" layoutY="30.0" prefHeight="312.0" prefWidth="148.0">
+                                       <children>
+                                          <Label fx:id="ID" prefHeight="50.0" prefWidth="115.0" text="ID" />
+                                          <Label fx:id="Taitle" prefHeight="49.0" prefWidth="126.0" text="material" />
+                                          <Label fx:id="Author" prefHeight="51.0" prefWidth="149.0" text="prix" />
+                                          <Label fx:id="Year" prefHeight="64.0" prefWidth="152.0" text="etat" />
+                                          <Label fx:id="Pages" prefHeight="60.0" prefWidth="149.0" text="Responsable" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="162.0" layoutY="26.0" prefHeight="238.0" prefWidth="148.0" spacing="29.0">
+                                       <children>
+                                          <JFXTextField fx:id="tfid" />
+                                          <JFXTextField fx:id="tftitle" />
+                                          <JFXTextField fx:id="tfauthor" />
+                                          <JFXTextField fx:id="tfyear" />
+                                          <JFXTextField fx:id="tfpages" />
+                                       </children>
+                                    </VBox>
+                                    <TableView fx:id="tvBooks" layoutX="389.0" layoutY="84.0" onMouseClicked="#mousebtn" prefHeight="295.0" prefWidth="406.0"  stylesheets="@../../css/fullpackstyling.css">
+                                      <columns>
+                                        <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="colTitle" prefWidth="75.0" text="material" />
+                                          <TableColumn fx:id="colAuthor" prefWidth="75.0" text="prix" />
+                                          <TableColumn fx:id="colYear" prefWidth="75.0" text="etat" />
+                                          <TableColumn fx:id="colPages" prefWidth="75.0" text="responsable" />
+                                      </columns>
+                                    </TableView>
+                                    <JFXButton fx:id="btnupdate" layoutX="150.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" stylesheets="" text="update" />
+                                    <JFXButton fx:id="btninsert" layoutX="360.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #4b7bec;" stylesheets="" text="insertion" />
+                                    <JFXButton fx:id="btndelete" layoutX="570.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="57.0" prefWidth="193.0"  style="-fx-background-color: #485460;" stylesheets="" text="Delete" />
+                                    <JFXTextField fx:id="filtrage" layoutX="513.0" layoutY="26.0" promptText="Search" labelFloat="true" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Factures des Employes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="522.0" prefWidth="1219.0">
+                                 <children>
+                                    <TableView fx:id="table_Emp" layoutX="588.0" layoutY="111.0" onMouseClicked="#mousebtn4" prefHeight="315.0" prefWidth="655.0"  stylesheets="@../../css/fullpackstyling.css">
+                                      <columns>
+                                        <TableColumn fx:id="emp_id" prefWidth="60.2667236328125" text="ID" />
+                                        <TableColumn fx:id="emp_client" prefWidth="70.13323974609375" text="CLIENT" />
+                                          <TableColumn fx:id="emp_date" prefWidth="76.7999267578125" text="DATE" />
+                                          <TableColumn fx:id="emp_reglement" prefWidth="78.93328857421875" text="REGLEMENT" />
+                                          <TableColumn fx:id="emp_etat" prefWidth="74.666748046875" text="ETAT" />
+                                          <TableColumn fx:id="emp_tva" prefWidth="76.533203125" text="TVA" />
+                                          <TableColumn fx:id="emp_remise" prefWidth="74.6666259765625" text="REMISE" />
+                                          <TableColumn fx:id="emp_nb" prefWidth="66.9332275390625" text="NB" />
+                                          <TableColumn fx:id="emp_totale" prefWidth="73.60002441406255" text="TOTALE" />
+                                      </columns>
+                                    </TableView>
+
+
+                                    <Line endX="100.0" layoutX="482.0" layoutY="9.0" startX="100.0" startY="435.3999938964844" stroke="#b9b1b1" strokeDashOffset="2.0" />
+                                    <HBox layoutX="12.0" layoutY="45.0" prefHeight="50.0" prefWidth="562.0" spacing="25.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="Employe :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets left="15.0" top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </Label>
+                                          <JFXTextField fx:id="nameEmploye" promptText="Employe" labelFloat="true">
+                                             <opaqueInsets>
+                                                <Insets left="10.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                          <Label text="Date :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets left="10.0" />
+                                             </opaqueInsets>
+                                          </Label>
+                                          <DatePicker fx:id="date_emp">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </DatePicker>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets left="10.0" />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <HBox layoutX="12.0" layoutY="108.0" prefHeight="54.0" prefWidth="563.0" spacing="25.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="Mode de réglement :">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboMode_Emp" onAction="#ComboboxMode_Employes" prefWidth="150.0" style="-fx-background-color: #AFB8B0">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                          <Label text="Etat :">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboEtat1_Emp" onAction="#ComboboxEtat_Empoyes" prefWidth="150.0" style="-fx-background-color: #afb8b0">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="175.0" prefHeight="50.0" prefWidth="562.0" spacing="90.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Inclure  le TVA">
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </CheckBox>
+                                          <Label text="TVA (%):">
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="TVA_Emp" prefHeight="26.0" prefWidth="152.0" promptText="\%" labelFloat="true">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="238.0" prefHeight="59.0" prefWidth="561.0" spacing="50.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="Bonus (%) :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets top="15.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="bonus_Emp" prefHeight="26.0" prefWidth="166.0" promptText="\%" labelFloat="true">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets top="15.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="12.0" layoutY="309.0" prefHeight="75.0" prefWidth="563.0" spacing="30.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="NB :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="NB_Emp" prefHeight="75.0" prefWidth="396.0" promptText="Note">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="397.0" prefHeight="50.0" prefWidth="562.0" spacing="50.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="TOTALE :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="Totale_emp" promptText="DT" labelFloat="true">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <JFXTextField layoutX="606.0" layoutY="39.0" promptText="Search" labelFloat="true" />
+                                    <JFXButton fx:id="btninsertEmp" layoutX="140.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" text="Ajouter" />
+                                    <JFXButton fx:id="btnupdateEmp" layoutX="350.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #4b7bec;" text="Modifier" />
+                                    <JFXButton fx:id="btndeleteEmp" layoutX="560.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="57.0" prefWidth="193.0"  style="-fx-background-color: #485460;" text="supprimer" />
+                                    <HBox layoutX="13.0" layoutY="5.0" prefHeight="34.0" prefWidth="194.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label fx:id="id_emp" prefHeight="34.0" prefWidth="142.0" >
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Factures des Clients">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="522.0" prefWidth="1219.0">
+                                 <children>
+                                    <TableView fx:id="table_facC" layoutX="588.0" layoutY="111.0" onMouseClicked="#mousebtn3" prefHeight="315.0" prefWidth="655.0"  stylesheets="@../../css/fullpackstyling.css">
+                                       <columns>
+                                          <TableColumn fx:id="fac_id" prefWidth="60.2667236328125" text="ID" />
+                                          <TableColumn fx:id="fac_client" prefWidth="70.13323974609375" text="CLIENT" />
+                                          <TableColumn fx:id="fac_date" prefWidth="76.7999267578125" text="DATE" />
+                                          <TableColumn fx:id="fac_reglement" prefWidth="78.93328857421875" text="REGLEMENT" />
+                                          <TableColumn fx:id="fac_etat" prefWidth="74.666748046875" text="ETAT" />
+                                          <TableColumn fx:id="fac_tva" prefWidth="76.533203125" text="TVA" />
+                                          <TableColumn fx:id="fac_remise" prefWidth="74.6666259765625" text="REMISE" />
+                                          <TableColumn fx:id="fac_nb" prefWidth="66.9332275390625" text="NB" />
+                                          <TableColumn fx:id="fac_totale" prefWidth="73.60002441406255" text="TOTALE" />
+                                       </columns>
+                                    </TableView>
+                                    <Line endX="100.0" layoutX="482.0" layoutY="9.0" startX="100.0" startY="435.3999938964844" stroke="#b9b1b1" strokeDashOffset="2.0" />
+                                    <HBox layoutX="12.0" layoutY="45.0" prefHeight="50.0" prefWidth="562.0" spacing="25.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="Client :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets left="15.0" top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </Label>
+                                          <JFXTextField fx:id="nameClient" promptText="Client" labelFloat="true">
+                                             <opaqueInsets>
+                                                <Insets left="10.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                          <Label text="Date :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets left="10.0" />
+                                             </opaqueInsets>
+                                          </Label>
+                                          <DatePicker fx:id="date_fac">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </DatePicker>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets left="10.0" />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <HBox layoutX="12.0" layoutY="108.0" prefHeight="54.0" prefWidth="563.0" spacing="25.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="Mode de réglement :">
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <textFill>
+
+                                             </textFill>
+                                              <font>
+                                                  <Font name="System Bold" size="14.0" />
+                                              </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboMode1" onAction="#ComboboxMode" prefWidth="150.0" style="-fx-background-color: #AFB8B0">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                          <Label text="Etat :">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="comboEtat1" onAction="#ComboboxEtat" prefWidth="150.0" style="-fx-background-color: #AFB8B0">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="175.0" prefHeight="50.0" prefWidth="562.0" spacing="90.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Inclure  le TVA">
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </CheckBox>
+                                          <Label text="TVA (%):">
+                                             <textFill>
+
+                                             </textFill>
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="TVA_fac" prefHeight="26.0" prefWidth="152.0" promptText="\%" labelFloat="true">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="238.0" prefHeight="59.0" prefWidth="561.0" spacing="50.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="Remise (%) :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets top="15.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="remise_fac" prefHeight="26.0" prefWidth="166.0" promptText="\%" labelFloat="true">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets top="15.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="12.0" layoutY="309.0" prefHeight="75.0" prefWidth="563.0" spacing="30.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="NB :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextArea fx:id="NB_fac" prefHeight="75.0" prefWidth="396.0" promptText="Note">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="397.0" prefHeight="50.0" prefWidth="562.0" spacing="50.0" style="-fx-background-color: rgba(15,205,197,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label text="TOTALE :">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <textFill>
+
+                                             </textFill>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <JFXTextField fx:id="Totale" promptText="DT" labelFloat="true">
+                                             <HBox.margin>
+                                                <Insets top="10.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
+                                    <JFXTextField layoutX="606.0" layoutY="39.0" promptText="Search" labelFloat="true" />
+                                    <JFXButton fx:id="btninsertClient" layoutX="140.0" layoutY="474.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" onAction="#handleButtonAction1" text="Ajouter" />
+                                    <JFXButton fx:id="btnupdateClient" layoutX="350.0" layoutY="474.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #4b7bec;"  onAction="#handleButtonAction1" text="Modifier" />
+                                    <JFXButton fx:id="btndeleteClient" layoutX="560.0" layoutY="474.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="193.0"  style="-fx-background-color: #485460;" onAction="#handleButtonAction1" text="supprimer" />
+                                    <JFXButton layoutX="770.0" layoutY="474.0" mnemonicParsing="false" onAction="#PDF" text="PDF" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #FA8231" />
+                                    <HBox layoutX="13.0" layoutY="5.0" prefHeight="34.0" prefWidth="194.0" style="-fx-background-color: rgba(0,162,211,0.3); -fx-background-radius: 10;">
+                                       <children>
+                                          <Label fx:id="id_fac" prefHeight="34.0" prefWidth="142.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TabPane>
+                    </children>
+                    <opaqueInsets>
+                        <Insets right="10.0" />
+                    </opaqueInsets>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

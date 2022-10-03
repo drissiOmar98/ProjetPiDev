@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="908.0" prefWidth="1226.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" >
+   <ImageView fitHeight="190.0" fitWidth="300.0" layoutX="556.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../resources/acceil.png" />
+   </ImageView>
+   <Pane layoutX="-1.0" layoutY="-3.0" prefHeight="78.0" prefWidth="1226.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+
+   <Label layoutX="403.0" layoutY="306.0" prefHeight="31.0" prefWidth="458.0" text="TRAVEL AGENCY MANAGEMENT SYSTEM">
+      <font>
+         <Font name="System Bold" size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="556.0" layoutY="344.0" prefHeight="31.0" prefWidth="111.0" text="Version 1.0.0">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+   <Label alignment="TOP_CENTER" layoutX="250.0" layoutY="390.0" prefHeight="31.0" prefWidth="800.0" text="Copyright ©  2021-   JEE ENGINEER- Email : Elyes.Bentrad@Esprit.tn">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Label>
+   <Label layoutX="339.0" layoutY="430.0" text="A  Program  for manage  travel agency  Software Solution  ">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="338.0" layoutY="470.0" text="This software provides to manage daily operations of Employees Recruitement and salary   ">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="340.0" layoutY="509.0" text="And this made for the pidev project at ESPRIT ">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="340.0" layoutY="573.0" text="These are the facilities of this software,">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="338.0" layoutY="614.0" prefHeight="31.0" prefWidth="342.0" text="- Manage Retirement Employees">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="338.0" layoutY="646.0" prefHeight="31.0" prefWidth="342.0" text="- Manage Employees">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="338.0" layoutY="677.0" prefHeight="31.0" prefWidth="342.0" text="- Manage Missions">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="338.0" layoutY="705.0" prefHeight="31.0" prefWidth="342.0" text="- Manage Bonus ">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="333.0" layoutY="736.0" prefHeight="31.0" prefWidth="368.0" text="- View Report .">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <Label layoutX="422.0" layoutY="819.0" text="Contact Us">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="554.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../resources/Facebook.png" />
+   </ImageView>
+   <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="606.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../resources/instergram.png" />
+   </ImageView>
+   <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="656.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../resources/LinkedIn.png" />
+   </ImageView>
+   <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="706.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../resources/Youtube.png" />
+   </ImageView>
+   <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="759.0" layoutY="815.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../resources/Tweeter.png" />
+   </ImageView>
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="862.0" layoutY="646.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../resources/java.png" />
+      </image>
+   </ImageView>
+
+</AnchorPane>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="itextpdf-5.4.0">
+    <CLASSES>
+      <root url="jar://D:/PI-Dev-Integration2/PI-Dev-Integration2/dist/lib/itextpdf-5.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-radius: 30 30 30 30;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Omar.ServiceOm.FXMLEventsController">
+   <children>
+      <AnchorPane prefHeight="806.0" prefWidth="1208.0" style="-fx-background-color: #ffffff;" stylesheets="@../../css/fullpackstyling.css">
+         <children>
+            <AnchorPane layoutX="91.0" layoutY="96.0" prefHeight="513.0" prefWidth="886.0" style="-fx-background-color: #131022; -fx-background-radius: 20 20 20 20;" stylesheets="@../../css/fullpackstyling.css">
+               <children>
+                  <TabPane layoutX="-94.0" layoutY="-96.0" prefHeight="776.0" prefWidth="1184.0" style="-fx-background-color: #030307; -fx-background-radius: 20 20 20 20;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Events">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="606.0" prefWidth="1160.0" style="-fx-background-color: #E2EDED;" stylesheets="@../../css/fullpackstyling.css">
+                                 <children>
+                                    <TextField fx:id="textname" layoutX="99.0" layoutY="148.0" prefHeight="26.0" prefWidth="195.0" />
+                                    <TextField fx:id="textperiod" layoutX="99.0" layoutY="205.0" prefHeight="26.0" prefWidth="195.0" />
+                                    <TextField fx:id="textavailable" layoutX="100.0" layoutY="378.0" prefHeight="26.0" prefWidth="194.0" />
+                                    <Label layoutX="25.0" layoutY="151.0" text="Name" textFill="#050000">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="22.0" layoutY="208.0" text="Period" textFill="#230101">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="381.0" text="Available" textFill="#1e0101">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="25.0" layoutY="321.0" text="Date " textFill="#150101">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="fielddate" layoutX="100.0" layoutY="318.0" prefHeight="26.0" prefWidth="193.0" />
+                                    <Button fx:id="insertButton" layoutX="42.0" layoutY="547.0" mnemonicParsing="false" onAction="#insertButton" prefHeight="43.0" prefWidth="154.0" style="-fx-background-color: #4b7bec;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text=" Add " textFill="#202022" />
+                                    <Label fx:id="connlabel" layoutX="364.0" layoutY="470.0" prefHeight="27.0" prefWidth="494.0" textFill="#c4371b" />
+                                    <TableView fx:id="TableView" layoutX="318.0" layoutY="84.0" onMouseClicked="#handleMouseClick" prefHeight="407.0" prefWidth="739.0">
+                                      <columns>
+                                        <TableColumn fx:id="idColumn" prefWidth="76.0" text="ID" />
+                                        <TableColumn fx:id="nameColumn" text="Name" />
+                                        <TableColumn fx:id="periodColumn" prefWidth="102.0" text="Period" />
+                                         <TableColumn fx:id="locationColumn" editable="false" prefWidth="104.5999755859375" text="Location" />
+                                         <TableColumn fx:id="dateColumn" prefWidth="105.0" text="Date" />
+                                          <TableColumn fx:id="availableColumn" editable="false" prefWidth="142.5999755859375" text="Available" />
+                                          <TableColumn fx:id="priceColumn" editable="false" prefWidth="127.00006103515625" text="Price" />
+                                         
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="updateButton" layoutX="223.0" layoutY="549.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="41.0" prefWidth="160.0" style="-fx-background-color: #0fb9b1;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Edit " textFill="#1d1e1e" />
+                                    <Button fx:id="deleteButton" layoutX="414.0" layoutY="548.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="42.0" prefWidth="172.0" style="-fx-background-color: #90a5b4;" styleClass="button4" stylesheets="@../../css/fullpackstyling.css" text="Delete" textFill="#262728" />
+                                    <TextField fx:id="filterfield" layoutX="156.0" layoutY="30.0" />
+                                    <Label layoutX="36.0" layoutY="30.0" text="Recherche" textFill="#180101">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                     <Text fx:id="Location" fill="#180101" fontSmoothingType="LCD" layoutX="640.0" layoutY="492.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="chart-plot-background" wrappingWidth="201.99999475479126">
+                                         <font>
+                                             <Font name="System Bold Italic" size="13.0" />
+                                         </font>
+                                    </Text>
+                                    <Label layoutX="14.0" layoutY="262.0" text="Location " textFill="#050000">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textlocation" layoutX="99.0" layoutY="259.0" prefHeight="26.0" prefWidth="194.0" />
+                                    <Label layoutX="30.0" layoutY="98.0" text="Id" textFill="#050000">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textid" layoutX="99.0" layoutY="95.0" prefHeight="26.0" prefWidth="193.0" />
+                                    <Label layoutX="16.0" layoutY="438.0" text="Price" textFill="#1e0101">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textprice" layoutX="98.0" layoutY="435.0" prefHeight="26.0" prefWidth="193.0" />
+                                    <Button layoutX="897.0" layoutY="550.0" mnemonicParsing="false" onAction="#btnrun" prefHeight="49.0" prefWidth="159.0" style="-fx-background-color: #fa8231;" text="SMS" textFill="#1b1a19" />
+                                    <Button layoutX="898.0" layoutY="645.0" mnemonicParsing="false" onAction="#btnweather" prefHeight="50.0" prefWidth="158.0" style="-fx-background-color: #fa8231;" text="Weather" textFill="#171717" />
+                                    <Button fx:id="tri" layoutX="958.0" layoutY="9.0" mnemonicParsing="false" onAction="#btntrier" prefHeight="41.0" prefWidth="98.0" style="-fx-background-color: #fa8231;" text="Trier" textFill="#141413" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="134.0" layoutY="17.0" textFill="#130101">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

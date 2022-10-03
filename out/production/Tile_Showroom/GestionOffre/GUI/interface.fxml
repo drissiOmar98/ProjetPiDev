@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-radius: 20;" stylesheets="@../FrontAndStylesOffres/fullpackstyling.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionOffre.GUI.interfaceCont">
+    <children>
+        <AnchorPane prefHeight="790.0" prefWidth="1156.0">
+            <children>
+                <AnchorPane fx:id="anchorepane" layoutX="91.0" layoutY="69.0" prefHeight="718.0" prefWidth="1042.0" stylesheets="@../FrontAndStylesOffres/fullpackstyling.css">
+               <children>
+                  <TabPane prefHeight="738.0" prefWidth="1000.0" stylesheets="@../../css/fullpackstyling.css" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="offre">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="708.0" prefWidth="1030.0">
+                                 <children>
+                                    <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="159.0" prefHeight="25.0" prefWidth="165.0" text="            Date de validité :" textFill="#d3c5c5" />
+                                    <TableView fx:id="TableView" layoutX="240.0" layoutY="73.0" onMouseClicked="#handelMouseClick" prefHeight="246.0" prefWidth="706.0" stylesheets="@../../../../../../Documents/GitHub/ProjetPiDev/ProjetPi/src/css/fullpackstyling.css">
+                                      <columns>
+                                        <TableColumn fx:id="IdOffreCol" prefWidth="47.0" text="id offre" />
+                                        <TableColumn fx:id="IdReservationCol" prefWidth="106.0" text="id de réservation" />
+                                          <TableColumn fx:id="DateVALCOL" prefWidth="96.0" text="date de validité " />
+                                          <TableColumn fx:id="TAUXCOL" prefWidth="93.0" text="taux de remise " />
+                                          <TableColumn fx:id="id_image" prefWidth="72.0" text="Path Image" />
+                                          <TableColumn fx:id="id_video" prefWidth="71.0" text="Path Video" />
+                                          <TableColumn fx:id="DescColl" minWidth="8.39996337890625" prefWidth="98.39996337890625" text="Description " />
+                                          <TableColumn fx:id="TitreColl" prefWidth="63.20001220703125" text="Titre" />
+                                          <TableColumn fx:id="colPrix" prefWidth="310.39990234375" text="Prix" />
+                                      </columns>
+                                    </TableView>
+                                    <DatePicker fx:id="Datevalidite" layoutX="6.0" layoutY="197.0" prefHeight="25.0" prefWidth="154.0" />
+                                    <Label layoutX="12.0" layoutY="395.0" prefHeight="32.0" prefWidth="146.0" text="      taux de remise :">
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="1.0" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill></Label>
+                                    <Button layoutX="531.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnfile" prefHeight="60.0" prefWidth="190.0" style="-fx-background-color: rgba(250,130,49,0.54)" stylesheets="@../FrontAndStylesOffres/fullpackstyling.css" text="File Chooser image" />
+                                    <Label layoutX="13.0" layoutY="508.0" prefHeight="45.0" prefWidth="147.0" text="description de l'offre:" textFill="#0e0505">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="descriptionOffre" layoutX="11.0" layoutY="555.0" prefHeight="85.0" prefWidth="249.0" />
+                                    <Button layoutX="315.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnvideo" prefHeight="60.0" prefWidth="191.0" style="-fx-background-color: rgba(250,130,49,0.49)" text=" Chooser video" />
+                                    <RadioButton fx:id="radiobtn1" layoutX="14.0" layoutY="434.0" mnemonicParsing="false" onAction="#rdselect" text="10%" textFill="#c53535" />
+                                    <RadioButton fx:id="radiobtn2" layoutX="14.0" layoutY="460.0" mnemonicParsing="false" onAction="#rdselect" text="30%" textFill="#c23b3b" />
+                                    <RadioButton fx:id="radiobtn3" layoutX="14.0" layoutY="483.0" mnemonicParsing="false" onAction="#rdselect" text="50%" textFill="#bf3b3b" />
+                                    <ImageView fx:id="QRcode" fitHeight="136.0" fitWidth="129.0" layoutX="757.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label layoutX="4.0" layoutY="265.0" prefHeight="24.0" prefWidth="210.0" style="visibility: hidden;" text="le taux de remise de cette offre est :" textFill="#fcf1f1" />
+                                    <Label fx:id="IdRemise" layoutX="158.0" layoutY="396.0" prefHeight="30.0" prefWidth="332.0" textFill="#daf7a6" />
+                                    <TextField fx:id="IdTitre" layoutX="7.0" layoutY="277.0" prefHeight="26.0" prefWidth="155.0" />
+                                    <Label layoutX="8.0" layoutY="239.0" prefHeight="26.0" prefWidth="152.0" text="          Titre de l'offre :" textFill="#eeebeb" />
+                                    <Label layoutX="11.0" layoutY="3.0" prefHeight="42.0" prefWidth="158.0" text="             Rechercher" textFill="#160101" />
+                                    <TextField fx:id="RechercheID" layoutX="5.0" layoutY="51.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Button fx:id="iDAjouter" contentDisplay="TOP" layoutX="314.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="60.0" prefWidth="194.0" style="-fx-background-color: #4b7bec;" stylesheets="@../FrontAndStylesOffres/fullpackstyling.css" text="Add">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                          </Button>
+                                          <Button fx:id="iDSupp" contentDisplay="TOP" layoutX="531.0" layoutY="560.0" mnemonicParsing="false" onAction="#btnDell" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #90a5b4;" stylesheets="@../FrontAndStylesOffres/fullpackstyling.css" text="Delete" textFill="#0b0b0b">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                          </Button>
+                                          <Button fx:id="iDEdit" contentDisplay="TOP" layoutX="749.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnEdit" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" stylesheets="@../FrontAndStylesOffres/fullpackstyling.css" text="Edit" textFill="#0e0e0e">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                          </Button>
+                                    <Label layoutX="9.0" layoutY="94.0" prefHeight="23.0" prefWidth="127.0" text="id Reservation" />
+                                    <TextField fx:id="idreservation" layoutX="5.0" layoutY="125.0" />
+                                    <ImageView fitHeight="42.0" fitWidth="35.0" layoutX="7.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="11.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/search_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="767.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnRes" prefHeight="46.0" prefWidth="87.0" style="-fx-background-color: rgba(250,130,49,0.36);" textFill="#fa823294">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" styleClass="button3">
+                                             <image>
+                                                <Image url="@../Icons/buy_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="17.0" layoutY="321.0" prefHeight="32.0" prefWidth="146.0" text="Prix :" textFill="#d0c9c9" />
+                                    <TextField fx:id="Prix" layoutX="10.0" layoutY="354.0" />
+                                    <ImageView fitHeight="150.0" fitWidth="34.0" layoutX="349.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/add_64.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="150.0" fitWidth="34.0" layoutX="559.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/delete_bin_64px.png" />
+                                       </image>
+                                    </ImageView>
+                                            <ImageView fitHeight="150.0" fitWidth="34.0" layoutX="778.0" layoutY="573.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../Icons/edit_property_64px.png" />
+                                                </image>
+                                            </ImageView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Favoris">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#OnMouseClicked" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tab2" layoutX="184.0" layoutY="379.0" prefHeight="200.0" prefWidth="329.0">
+                                      <columns>
+                                        <TableColumn fx:id="VLike" prefWidth="75.0" text="        Like" />
+                                          <TableColumn fx:id="vdatelike" prefWidth="124.0" text="                Date " />
+                                          <TableColumn fx:id="vidoffre" prefWidth="124.0" text="                 id offre" />
+                                      </columns>
+                                    </TableView>
+                                    <BarChart fx:id="barChart" layoutX="-18.0" layoutY="22.0" prefHeight="288.0" prefWidth="895.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </children>
+                              <children>
+                                  <AreaChart fx:id="areaChart" layoutX="-8.0" layoutY="10.0" prefHeight="400.0" prefWidth="667.0" title="WEEKLY Recruitement PROGRESS">
+                                      <xAxis>
+                                          <CategoryAxis label="DAYS" side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                          <NumberAxis label="SOLD ITEMS" side="LEFT" />
+                                      </yAxis>
+                                  </AreaChart>
+                                  <PieChart fx:id="PieChart" layoutX="707.0" layoutY="22.0" legendSide="TOP" prefHeight="376.0" prefWidth="474.0" title="Annual  Recruitement " />
+                              </children>
+
+                          </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+            <Label alignment="TOP_CENTER" layoutX="99.0" layoutY="31.0" prefHeight="26.0" prefWidth="155.0" text="Gestion des offres " textAlignment="CENTER" textFill="#fa6a39c5" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial" size="53.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="90.0" fitWidth="60.0" layoutX="61.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/around_the_globe_80px.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

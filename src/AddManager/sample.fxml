@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddManager.Controller">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #181480;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ressources/flight.png" />
+               </image></ImageView>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="401.0">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="84.0" layoutX="162.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ressources/padlock.png" />
+               </image></ImageView>
+            <Label layoutX="26.0" layoutY="124.0" prefHeight="68.0" prefWidth="323.0" text="Not a Manager?">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_sign_up" layoutX="97.0" layoutY="211.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up!" textFill="#110eed" underline="true">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="34.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</HBox>
